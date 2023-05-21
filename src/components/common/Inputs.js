@@ -40,3 +40,20 @@ export const DirectionInput = styled.input`
     background-color: #F2F2F2;
     outline: none;
 `
+export const LoginTextInput = styled.input`
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    padding: 4px;
+    width: 70%;
+    height: 20px;
+    border-radius: 30px;
+    border: transparent;
+    background-color: #F2F2F2;
+    outline: none;
+    &[type=number]::-webkit-inner-spin-button, 
+    &[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+    }
+
+`

@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 13% 16% 47% 25%;
+    grid-template-columns: 13% 16% 47% 16% 9%;
     background-color: #DB071E;
     height: 92px;
     width: 100vw;
@@ -45,6 +45,18 @@ export const InputContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
+`
+export const LoginContainer = styled.div`
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-direction: column;
 `
 export const ShoppingCartContainer = styled.div`
     display: flex;
@@ -202,4 +214,24 @@ export const PaymentContainer = styled.div`
     border-top: 1px solid lightgray;
     position: relative;
     flex-direction: row;
+`
+export const LoginInputContainer = styled.div`
+    width: 169px;
+    height: calc(${props => props.height}*124px);
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 3;
+    top: 85px;
+    left: 76%;
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Nunito', sans-serif;
+
 `

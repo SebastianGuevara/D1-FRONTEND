@@ -11,11 +11,11 @@ export const getProducts = () =>{
       return axios.request(config)     
 }
 
-export const sellProducts = (cart) =>{
+export const sellProducts = (cart, clientDocument) =>{
   const newCart= cart.map((product)=>{return {code: product.id, unitsToSell: product.quantity}});
   const cartProducts = JSON.stringify({
     "products": newCart,
-    "clientDocument": 4324
+    "clientDocument": clientDocument
   })
   
   let config = {

@@ -123,3 +123,46 @@ export const PaymentButton = styled.button`
         cursor: not-allowed; 
     }
 `
+export const LoginButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    outline: none;
+    border: transparent;
+    width: 130px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: 0;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight:600;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    align-self: center;
+`
+
+export const DefaultButton = styled.button`
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-color: #DB071E;
+    outline: none;
+    border: transparent;
+    width: 50%;
+    height: 30px;
+    color: #ffffff;
+    font-weight: 0;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    align-self: center;
+    &:hover{
+        background-color: #f9283e;
+    }
+
+`

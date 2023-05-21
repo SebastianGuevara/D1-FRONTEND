@@ -15,6 +15,7 @@ const Cart = (props) =>
     const [isCartEmpty, setIsCartEmpty] = useState(true);
     const [totalPrice, setTotalPrice] = useState(0);
     const cart = useSelector((state)=>state.cart);
+    const user = useSelector((state)=>state.user);
     const dispatch = useDispatch();
     useEffect(()=>{
         if(cart.products){
@@ -33,14 +34,21 @@ const Cart = (props) =>
     }
     const handleSellProducts = () =>{
         setIsCartEmpty(false);
-        sellProducts(cart.products).then(response => {
-            alert(response.data)
-            dispatch(emptyCart());
-        })
-        .catch(e =>{
-            alert(e.response.data);
+        if(user.id)
+        {
+            sellProducts(cart.products,user.id).then(response => {
+                alert(response.data)
+                dispatch(emptyCart());
+            })
+            .catch(e =>{
+                alert(e.response.data);
+                setIsCartEmpty(true);
+            });
+        }
+        else{
+            alert("Para hacer una compra primero tienes que iniciar sesión");
             setIsCartEmpty(true);
-        });
+        }
     }
     return(
         <CartContainer width = {props.width}>

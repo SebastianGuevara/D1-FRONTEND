@@ -1,5 +1,5 @@
 import React from "react";
-import { AddDeleteContainer, ProductOnCartContainer, ProductOnCartTextContainer } from "../common/Containers";
+import { ProductOnCartContainer, ProductOnCartTextContainer } from "../common/Containers";
 import { ProductOnCartImage } from "../common/Images";
 import { PriceText, ProductOnCartDescriptionText } from "../common/Text";
 import AddDelete from "./AddDelete";
