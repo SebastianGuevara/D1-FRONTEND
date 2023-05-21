@@ -43,3 +43,17 @@ export const AddToCartButton = styled.button`
         background-color: #f9283e;
     }
 `
+export const AddDeleteButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    outline: none;
+    border: transparent;
+    color:#DB071E;
+    height:24px;
+    width:24px;
+    border-radius:1000px;
+    font-size: 3rem;
+    cursor: pointer;
+`

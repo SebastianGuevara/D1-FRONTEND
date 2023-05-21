@@ -14,3 +14,20 @@ export const SerachInput = styled.input`
         color: #bfbfbf;
     }
 `
+export const ProductQuantityInput = styled.input`
+    font-family: 'Nunito', sans-serif;
+    padding: 4px;
+    width: 100%;
+    border: transparent;
+    background-color: #F2F2F2;
+    width: 60%;
+    height: 13px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-justify: center;
+    font-weight: 600;
+
+`

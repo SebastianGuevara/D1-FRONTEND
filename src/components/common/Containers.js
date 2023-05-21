@@ -118,4 +118,5 @@ export const AddDeleteContainer = styled.div`
     font-weight: 0;
     font-size: 0.9rem;
     border-radius: 10px;
+    gap: 10px;
 `
