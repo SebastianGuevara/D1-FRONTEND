@@ -1,11 +1,30 @@
-import React from 'react';
-import { Container } from '../components/common/Containers';
+import React, { useEffect, useState } from 'react';
+import { PagesContainer, ProductsBannerContainer, ProductsContainer, SliderContainer } from '../components/common/Containers';
+import ProductBanner from '../components/features/ProductBanner';
+import { getProducts } from '../services/ShopApi';
 
 const ProductsPage = () => {
+    const [products, setProducts] = useState(null);
+    useEffect(()=>{
+        getProducts().then(response=>{
+            setProducts(response.data);
+        })
+    },[])
     return(
-        <Container>
+        <PagesContainer>
+            <SliderContainer>
 
-        </Container>
+            </SliderContainer>
+            <ProductsContainer>
+                <h2>Productos</h2>
+                <ProductsBannerContainer>
+                    {products&&products.map(product=>(
+                        <ProductBanner name={product.name} price={product.value}/>
+                    ))}
+
+                </ProductsBannerContainer>
+            </ProductsContainer>
+        </PagesContainer>
     )
 }
 

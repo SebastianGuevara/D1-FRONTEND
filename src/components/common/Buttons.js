@@ -23,5 +23,23 @@ export const ShoppingCartButton = styled.button`
     border: transparent;
     cursor: pointer;
     margin-right: 25px;
-
+`
+export const AddToCartButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DB071E;
+    outline: none;
+    border: transparent;
+    width: 100%;
+    height: 30px;
+    color: #ffffff;
+    font-weight: 0;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    gap: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #f9283e;
+    }
 `
