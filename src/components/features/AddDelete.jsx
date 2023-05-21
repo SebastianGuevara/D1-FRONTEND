@@ -4,7 +4,7 @@ import { AddDeleteButton } from "../common/Buttons";
 import { Icon } from "@iconify/react";
 import { ProductQuantityInput } from "../common/Inputs";
 import { useDispatch } from "react-redux";
-import { addProductQuantity, removeProduct, removeProductQuantity } from "../../redux/cartSlice";
+import { addProductQuantity, removeProduct, removeProductQuantity } from "../../redux/slices/cartSlice";
 import { useSelector } from "react-redux";
 
 const AddDelete = (props) => {

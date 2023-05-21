@@ -6,7 +6,7 @@ import { AddToCartButton } from "../common/Buttons";
 import { Icon } from '@iconify/react';
 import AddDelete from "./AddDelete";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../redux/cartSlice";
+import { addProduct } from "../../redux/slices/cartSlice";
 const ProductBanner = (props) => {
     const [isOnCart, setIsOnCart] = useState(false);
     const dispatch = useDispatch(); 

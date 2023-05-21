@@ -7,7 +7,7 @@ export const Container = styled.main`
     height: 100vh;
     width: 100vw;
     position: relative;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: hidden;
     background-color: #f2f2f2;
 `
@@ -146,7 +146,7 @@ export const CartInformationContainer = styled.div`
     display: flex;
     flex-direction: column;
     width:100%;
-    height: 21%;
+    height: 12%;
     object-fit: contain;
     margin: 16px 16px 0px 80px;
     gap: 15px;
@@ -162,14 +162,16 @@ export const MiniInformationContainer = styled.div`
 export const ProductsOnCartContainer = styled.div`
     display: flex;
     flex-direction: column;
-    height: 66.83%;
+    height: 81%;
     width: 100%;
     margin: 0px 16px 16px 80px;
-    gap: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
+    align-items: center;
+    justify-content: flex-start;
 `
 export const ProductOnCartContainer = styled.div`
+    margin-top: 10px;
     display: flex;
     background-color: white;
     height: 64px;
@@ -192,4 +194,12 @@ export const ProductOnCartTextContainer = styled.div`
     height: 100%;
     width: 50%;
     gap: 10px;
+`
+export const PaymentContainer = styled.div`
+    display: flex;
+    height: 8%;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    position: relative;
+    flex-direction: row;
 `

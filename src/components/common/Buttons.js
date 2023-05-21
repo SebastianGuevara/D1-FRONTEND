@@ -76,5 +76,50 @@ export const CloseButton = styled.button`
     &:hover{
         color: black;
     }
-
+`
+export const EmptyCartButton = styled.button`
+    background-color: #FDEEEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    align-self: center;
+    outline: none;
+    border: transparent;
+    border-radius: 10px;
+    height: 40px;
+    color: #EC5B6C;
+    font-weight: 600;
+    gap: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+`
+export const PaymentButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DB071E;
+    outline: none;
+    border: transparent;
+    width: 20%;
+    height: 40px;
+    color: #ffffff;
+    font-weight: 0;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    align-self: center;
+    margin-left: 75%;
+    &:hover{
+        background-color: #f9283e;
+    }
+    &:disabled{
+        background-color: #F5F5F5;
+        color: #cacaca;
+        border: 1px solid #cacaca;
+        cursor: not-allowed; 
+    }
 `
