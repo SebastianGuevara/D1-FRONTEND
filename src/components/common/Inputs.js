@@ -17,7 +17,6 @@ export const SerachInput = styled.input`
 export const ProductQuantityInput = styled.input`
     font-family: 'Nunito', sans-serif;
     padding: 4px;
-    width: 100%;
     border: transparent;
     background-color: #F2F2F2;
     width: 60%;
@@ -29,5 +28,15 @@ export const ProductQuantityInput = styled.input`
     text-align: center;
     text-justify: center;
     font-weight: 600;
-
+`
+export const DirectionInput = styled.input`
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    padding: 4px;
+    width: 40%;
+    height: 9px;
+    border-radius: 30px;
+    border: transparent;
+    background-color: #F2F2F2;
+    outline: none;
 `

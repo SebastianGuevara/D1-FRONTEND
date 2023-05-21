@@ -9,3 +9,8 @@ export const ProductImage = styled.img`
     width:190px;
     object-fit: contain;
 `
+export const ProductOnCartImage = styled.img`
+    height:64px;
+    width:64px;
+    object-fit: contain;
+`

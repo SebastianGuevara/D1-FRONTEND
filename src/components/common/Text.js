@@ -10,3 +10,6 @@ export const ProductDescriptionText = styled.span`
     font-weight: 600;
     align-self: flex-start;
 `
+export const ProductOnCartDescriptionText = styled.span`
+    color: #c0c0c0;
+`

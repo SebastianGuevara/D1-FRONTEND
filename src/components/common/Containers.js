@@ -7,7 +7,7 @@ export const Container = styled.main`
     height: 100vh;
     width: 100vw;
     position: relative;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     background-color: #f2f2f2;
 `
@@ -117,6 +117,77 @@ export const AddDeleteContainer = styled.div`
     color: #ffffff;
     font-weight: 0;
     font-size: 0.9rem;
+    border-radius: 30px;
+    gap: 10px;
+`
+export const CartContainer = styled.div`
+    height: 100vh;
+    width: calc(${props => props.width}*533px);
+    background-color: #FFFFFF;
+    z-index: 4;
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+`
+export const ShadowContainer = styled.div`
+    background-color: rgba(0,0,0,calc(${props => props.opacity}*0.3));
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+`
+export const CartInformationContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 21%;
+    object-fit: contain;
+    margin: 16px 16px 0px 80px;
+    gap: 15px;
+`
+export const MiniInformationContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    gap: 5px;
+    position: relative;
+`
+export const ProductsOnCartContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 66.83%;
+    width: 100%;
+    margin: 0px 16px 16px 80px;
+    gap: 10px;
+`
+export const ProductOnCartContainer = styled.div`
+    display: flex;
+    background-color: white;
+    height: 64px;
+    width: 87%;
     border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);
+    align-items: center;
+    padding: 8px;
+    gap: 20px;
+
+    &:hover{
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+    }
+`
+export const ProductOnCartTextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
     gap: 10px;
 `
