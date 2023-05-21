@@ -5,15 +5,15 @@ import { PriceText, ProductOnCartDescriptionText } from "../common/Text";
 import AddDelete from "./AddDelete";
 
 
-const ProductOnCart = () => {
+const ProductOnCart = (props) => {
     return(
         <ProductOnCartContainer>
             <ProductOnCartImage src='/images/test.webp'/>
             <ProductOnCartTextContainer>
-                <ProductOnCartDescriptionText>COCA-COLA</ProductOnCartDescriptionText>
-                <PriceText>$ 3.990</PriceText>
+                <ProductOnCartDescriptionText>{props.name}</ProductOnCartDescriptionText>
+                <PriceText>{'$ '+props.price}</PriceText>
             </ProductOnCartTextContainer>
-            <AddDelete width={'40%'}/>
+            <AddDelete width={'40%'} id={props.id}/>
         </ProductOnCartContainer>
     )
 }

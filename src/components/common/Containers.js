@@ -166,6 +166,8 @@ export const ProductsOnCartContainer = styled.div`
     width: 100%;
     margin: 0px 16px 16px 80px;
     gap: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 `
 export const ProductOnCartContainer = styled.div`
     display: flex;

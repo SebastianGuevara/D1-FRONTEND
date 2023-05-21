@@ -19,7 +19,7 @@ const ProductsPage = () => {
                 <h2>Productos</h2>
                 <ProductsBannerContainer>
                     {products&&products.map(product=>(
-                        <ProductBanner name={product.name} price={product.value}/>
+                        <ProductBanner key={product.id} name={product.name} price={product.value} id={product.id} quantity={product.quantity}/>
                     ))}
 
                 </ProductsBannerContainer>

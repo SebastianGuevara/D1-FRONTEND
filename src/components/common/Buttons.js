@@ -60,14 +60,14 @@ export const AddDeleteButton = styled.button`
 export const CloseButton = styled.button`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: transparent;
     outline: none;
     border: transparent;
     color: #9f9f9f;
     position: absolute;
     right: -185px;
-    width: 100%;
+    width: 55%;
     cursor: pointer;
     transition: 0.5s;
     font-size: 0.9rem;
