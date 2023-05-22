@@ -16,6 +16,11 @@ const AdminMenu = (props) =>{
             </MiniHeaderContainer>
             <AdminMenuButtonsContainer>
                 <h3 style={{marginLeft:'24px'}}>Menú de Administrador</h3>
+                <Link to='/' style={{textDecoration: 'none', width: '100%'}}>
+                    <AdminMenuButton>
+                        <span>Inicio</span>
+                    </AdminMenuButton>
+                </Link>
                 <Link to='adminProduct' style={{textDecoration: 'none', width: '100%'}}>
                     <AdminMenuButton>
                         <span>Administrar Productos</span>

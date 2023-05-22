@@ -283,5 +283,13 @@ export const SaleContainer = styled.div`
     border-bottom: 2px solid lightgray;
     display: flex;
     flex-direction: column;
-
+`
+export const ButtonsLoginContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
 `

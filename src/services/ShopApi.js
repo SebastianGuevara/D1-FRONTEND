@@ -81,3 +81,14 @@ export const getSales = () => {
   
   return axios.request(config)
 }
+
+export const getSalesById = (userDocument) => {
+  let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: `http://localhost:8010/api/userSaleHistory/${userDocument}`,
+    headers: { }
+  };
+  
+  return axios.request(config);
+}

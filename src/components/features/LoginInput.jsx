@@ -1,20 +1,18 @@
 import React, {useRef} from "react";
 import { LoginTextInput } from "../common/Inputs";
-import { LoginInputContainer } from "../common/Containers";
+import { ButtonsLoginContainer, LoginInputContainer } from "../common/Containers";
 import { DefaultButton } from "../common/Buttons";
 import { useDispatch } from "react-redux";
 import { handleUserLogin } from "../../redux/slices/userSlices";
-import { useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 
 const LoginInput = (props) =>{
     const dispatch = useDispatch();
-    const user = useSelector(state => state.user);
     const inputNameRef = useRef(null);
     const inputIdRef = useRef(null);
     const handleClickLoginButton = () =>{
         dispatch(handleUserLogin({name:inputNameRef.current.value,id:inputIdRef.current.value}))
-    }   
+    }
     return(
         <LoginInputContainer height={props.display}>
             {!props.userLogged?<>
@@ -22,11 +20,15 @@ const LoginInput = (props) =>{
                 <LoginTextInput ref={inputNameRef} placeholder="Nombre"/>
                 <DefaultButton onClick={()=>handleClickLoginButton()}>Inicia Sesión</DefaultButton>
             </>:
-            <>
-                {user.id&&<span>{user.id}</span>}
-                {user.name&&<span>{user.name}</span>}
-                <DefaultButton onClick={()=>dispatch(handleUserLogin({name:null,id:null}))}>Cerrar Sesión</DefaultButton>
-            </>}
+            <ButtonsLoginContainer>
+                <Link to='/shoppingHistory' style={{textDecoration: 'none', width: '100%', display: 'flex', alignItems: 'center', justifyContent:'center'}}>
+                    <DefaultButton>Historial de compras</DefaultButton>
+                </Link>
+                <Link to='/' style={{textDecoration: 'none', width: '100%', display: 'flex', alignItems: 'center', justifyContent:'center'}}>
+                    <DefaultButton onClick={()=>dispatch(handleUserLogin({name:null,id:null}))}>Cerrar Sesión</DefaultButton>
+                </Link>
+                
+            </ButtonsLoginContainer>}
             
         </LoginInputContainer>
     )
