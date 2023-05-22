@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState, useEffect }  from "react";
 import { ProductBannerContainer } from "../common/Containers";
 import { ProductImage } from "../common/Images";
 import { PriceText, ProductDescriptionText } from "../common/Text";
@@ -9,7 +9,8 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/slices/cartSlice";
 const ProductBanner = (props) => {
     const [isOnCart, setIsOnCart] = useState(false);
-    const dispatch = useDispatch(); 
+    const [url, setUrl] = useState(true);
+    const dispatch = useDispatch();
     const handleAddToCartClick = (id,name,price) =>{
         const info ={
             id: id,
@@ -20,10 +21,14 @@ const ProductBanner = (props) => {
         setIsOnCart(true);
         dispatch(addProduct(info));
     }
+    const handleImageError = () =>{
+        setUrl(false);
+    }
 
     return( 
         <ProductBannerContainer>
-            <ProductImage src="/images/test.webp"/>
+            {url?<ProductImage src={`https://d1images.s3.amazonaws.com/${props.id}.webp`} alt="Product image" onError={handleImageError}/>:
+            <ProductImage src='images/no-photo.png' alt="Default product image"/>}
             <PriceText>{'$ '+props.price}</PriceText>
             <ProductDescriptionText>{props.name.toUpperCase()}</ProductDescriptionText>
             {!isOnCart?

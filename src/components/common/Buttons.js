@@ -106,7 +106,7 @@ export const PaymentButton = styled.button`
     height: 40px;
     color: #ffffff;
     font-weight: 0;
-    font-size: 1.1rem;
+    font-size: 110%;
     border-radius: 10px;
     gap: 5px;
     cursor: pointer;

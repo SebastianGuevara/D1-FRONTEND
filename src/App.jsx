@@ -7,11 +7,13 @@ import { Routes } from "react-router-dom/dist"
 import AdminProductsPage from "./pages/AdminProductsPage";
 import AdminUsers from "./pages/AdminUsers";
 import ShopppingHistory from "./pages/ShoppingHistory";
+import { useSelector } from "react-redux";
 
 function App() {
+  const menu = useSelector(state => state.menu)
 
   return (
-    <Container>
+    <Container scroll={menu.scroll}>
       <Router>
         <Header/>
         <Routes>

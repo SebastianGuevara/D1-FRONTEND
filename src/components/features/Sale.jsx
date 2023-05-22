@@ -8,6 +8,7 @@ const Sale = (props) => {
             {props.documentClient&&<span>{`Documento del cliente: ${props.documentClient}`}</span>}
             <span>{`Cantidad comprada: ${props.totalAmount}`}</span>
             <span>{`Fecha de compra: ${props.dateCreated}`}</span>
+            <span>{`Lugar de compra: ${props.address}`}</span>
         </SaleContainer>
     )
 }

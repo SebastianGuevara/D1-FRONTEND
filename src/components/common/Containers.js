@@ -8,7 +8,7 @@ export const Container = styled.main`
     height: 100vh;
     width: 100vw;
     position: relative;
-    overflow-y: scroll;
+    overflow-y: ${props => props.scroll};
     overflow-x: hidden;
     background-color: #f2f2f2;
 `

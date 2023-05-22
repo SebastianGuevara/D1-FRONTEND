@@ -26,7 +26,7 @@ const ShopppingHistory = () => {
                 <h2>{`Historial de compras de ${user.name}`}</h2>
                 <SalesHistoryContainer>
                     {(sales&&sales.length!==0)?sales.map(sale => (
-                        <Sale key={sale.id} id={sale.id} totalAmount={sale.totalAmount} dateCreated={sale.dateCreated}/>
+                        <Sale key={sale.id} id={sale.id} totalAmount={sale.totalAmount} dateCreated={sale.dateCreated} address={sale.address}/>
                     )):<h3>Aún no tienes compras</h3>}
                     
                 </SalesHistoryContainer>

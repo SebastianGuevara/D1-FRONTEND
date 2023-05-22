@@ -5,6 +5,8 @@ import { getProducts } from '../services/ShopApi';
 import { SliderImages } from '../components/common/Images';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Icon } from '@iconify/react';
+import { AddDeleteButton } from '../components/common/Buttons';
 
 const ProductsPage = () => {
     const [products, setProducts] = useState(null);
@@ -20,7 +22,7 @@ const ProductsPage = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoPlay: true
+        autoplay: true,
       };
     return(
         <PagesContainer>

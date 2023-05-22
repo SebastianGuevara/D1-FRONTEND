@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { emptyCart } from '../../redux/slices/cartSlice';
 import { sellProducts } from '../../services/ShopApi';
+import { handleScroll } from '../../redux/slices/menuSlice';
 
 const Cart = (props) =>
 {
@@ -50,6 +51,10 @@ const Cart = (props) =>
             setIsCartEmpty(true);
         }
     }
+    const handleCloseClick = () =>{
+        dispatch(handleScroll({scroll:'scroll'}));
+        props.close(0);
+    }
     return(
         <CartContainer width = {props.width}>
             <CartInformationContainer>
@@ -58,7 +63,7 @@ const Cart = (props) =>
                     <Icon icon="mingcute:truck-line" color="#db071e" width="19px" />
                     <PriceText>Enviar a:</PriceText>
                     <DirectionInput placeholder='Ingrese su dirección'/>
-                    <CloseButton onClick={()=>props.close(0)}>Cerrar X</CloseButton>
+                    <CloseButton onClick={()=>handleCloseClick()}>Cerrar X</CloseButton>
                 </MiniInformationContainer>
                 <MiniInformationContainer>
                     <Icon icon="iconoir:shop" color="#db071e" width="17" />

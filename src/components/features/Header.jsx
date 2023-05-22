@@ -9,6 +9,8 @@ import LoginInput from "./LoginInput";
 import { useSelector } from "react-redux";
 import AdminMenu from "./AdminMenu";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { handleScroll } from "../../redux/slices/menuSlice";
 const Header = () => {
     const [isOnCart, setIsOnCart] = useState(0);
     const [isOnAdmin, setIsOnAdmin] = useState(0);
@@ -16,6 +18,7 @@ const Header = () => {
     const [userClick, setUserClick] = useState(false);
     const [userIsLogged, setUserIsLogged] = useState(false);
     const user = useSelector(state=>state.user);
+    const dispatch = useDispatch();
 
     useEffect(()=>{
         if(user.id){
@@ -29,10 +32,12 @@ const Header = () => {
     const handleClickOnCart = () =>{
         setIsOnCart(1);
         setIsOnShadow(1);
+        dispatch(handleScroll({scroll:'hidden'}));
     }
     const handleClickOnAdmin = () =>{
         setIsOnAdmin(1);
         setIsOnShadow(1);
+        dispatch(handleScroll({scroll:'hidden'}));
     }
     const handleClickOnLogin = () =>{
         setUserClick(!userClick);
@@ -41,6 +46,7 @@ const Header = () => {
         setIsOnAdmin(0);
         setIsOnCart(0);
         setIsOnShadow(0);
+        dispatch(handleScroll({scroll:'scroll'}));
     }
     return(
     <>
