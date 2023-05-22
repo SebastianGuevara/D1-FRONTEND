@@ -4,7 +4,7 @@ export const getProducts = () =>{
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'http://localhost:8010/api/products',
+        url: 'http://shop-api-container/api/products',
         headers: { }
       };
 
@@ -21,7 +21,7 @@ export const sellProducts = (cart, clientDocument) =>{
   let config = {
     method: 'put',
     maxBodyLength: Infinity,
-    url: 'http://localhost:8010/api/sellProducts',
+    url: 'http://shop-api-container/api/sellProducts',
     headers: { 
       'Content-Type': 'application/json'
     },
@@ -42,7 +42,7 @@ export const addProduct = (product) =>{
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'http://localhost:8010/api/product',
+    url: 'http://shop-api-container/api/product',
     headers: { 
       'Content-Type': 'application/json'
     },
@@ -61,7 +61,7 @@ export const addStockToProduct = (product) =>{
   let config = {
     method: 'put',
     maxBodyLength: Infinity,
-    url: 'http://localhost:8010/api/productStock',
+    url: 'http://shop-api-container/api/productStock',
     headers: { 
       'Content-Type': 'application/json'
     },
@@ -75,7 +75,7 @@ export const getSales = () => {
   let config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: 'http://localhost:8010/api/sale',
+    url: 'http://shop-api-container/api/sale',
     headers: { }
   };
   
@@ -86,7 +86,7 @@ export const getSalesById = (userDocument) => {
   let config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: `http://localhost:8010/api/userSaleHistory/${userDocument}`,
+    url: `http://shop-api-container/api/userSaleHistory/${userDocument}`,
     headers: { }
   };
   
