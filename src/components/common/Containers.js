@@ -73,6 +73,7 @@ export const SliderContainer = styled.div`
 `
 export const PagesContainer = styled.div`
     max-width: 1332.1px;
+    font-family: 'Nunito', sans-serif;
     width: 95%;
     height: calc(100vh - 92px);
     display: inline-block;
@@ -269,5 +270,18 @@ export const AdminContainer = styled.div`
     justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
+`
+export const SalesHistoryContainer = styled(AdminContainer)`
+    height: auto;
+    border-top: 2px solid #DB071E;
+`
+export const SaleContainer = styled.div`
+    background-color: transparent;
+    height: 100px;
+    width: 800px;
+    margin-top: 20px;
+    border-bottom: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
 
 `

@@ -23,7 +23,7 @@ const AdminMenu = (props) =>{
                 </Link> 
                 <Link to='adminUser' style={{textDecoration: 'none', width: '100%'}}>
                     <AdminMenuButton>
-                        <span>Administrar Usuarios</span>
+                        <span>Ver historial de ventas</span>
                     </AdminMenuButton>
                 </Link>
                 

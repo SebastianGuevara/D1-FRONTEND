@@ -70,3 +70,14 @@ export const addStockToProduct = (product) =>{
   
   return axios.request(config)
 }
+
+export const getSales = () => {
+  let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'http://localhost:8010/api/sale',
+    headers: { }
+  };
+  
+  return axios.request(config)
+}
