@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Slider from "react-slick";
 
 export const Container = styled.main`
     display: flex;
@@ -65,11 +66,25 @@ export const ShoppingCartContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
 `
-export const SliderContainer = styled.div`
-    background-color: green;
-    display: flex;
-    height: 345px;
-    width: 100%;
+export const SliderContainer = styled(Slider)` 
+    margin-top: 20px;
+
+    ul li button {
+        color: yellow;
+        &:before{
+            font-size: 1rem;
+            color: #DB071E;
+        }
+        &:after{
+            font-size: 1rem;
+            color: yellow;
+        }
+    }
+    button{
+        color: yellow;
+    }
+
+
 `
 export const PagesContainer = styled.div`
     max-width: 1332.1px;

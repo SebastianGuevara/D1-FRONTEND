@@ -14,3 +14,9 @@ export const ProductOnCartImage = styled.img`
     width:64px;
     object-fit: contain;
 `
+export const SliderImages = styled.img`
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+`
