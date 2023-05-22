@@ -164,5 +164,23 @@ export const DefaultButton = styled.button`
     &:hover{
         background-color: #f9283e;
     }
+`
+export const AdminMenuButton = styled.button`
+    background-color: transparent;
+    margin: 0px 25px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 15px 15px 24px;
+    border-radius: 30px;
+    transition: 0.5s;
+    position: relative;
 
+    &:hover{
+       background-color: #fce0e1; 
+    }
 `

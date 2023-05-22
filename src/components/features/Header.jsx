@@ -7,8 +7,12 @@ import { SerachInput } from "../common/Inputs";
 import Cart from "./Cart";
 import LoginInput from "./LoginInput";
 import { useSelector } from "react-redux";
+import AdminMenu from "./AdminMenu";
+import { Link } from "react-router-dom";
 const Header = () => {
     const [isOnCart, setIsOnCart] = useState(0);
+    const [isOnAdmin, setIsOnAdmin] = useState(0);
+    const [isOnShadow, setIsOnShadow] = useState(0);
     const [userClick, setUserClick] = useState(false);
     const [userIsLogged, setUserIsLogged] = useState(false);
     const user = useSelector(state=>state.user);
@@ -24,20 +28,32 @@ const Header = () => {
 
     const handleClickOnCart = () =>{
         setIsOnCart(1);
+        setIsOnShadow(1);
+    }
+    const handleClickOnAdmin = () =>{
+        setIsOnAdmin(1);
+        setIsOnShadow(1);
     }
     const handleClickOnLogin = () =>{
         setUserClick(!userClick);
+    }
+    const handleClickOnShadow = () =>{
+        setIsOnAdmin(0);
+        setIsOnCart(0);
+        setIsOnShadow(0);
     }
     return(
     <>
         <HeaderContainer>
             <LogoContainer>
-                <Logo src="/images/D1logo.png"/>
+                <Link to={'/'}>
+                    <Logo src="/images/D1logo.png"/>
+                </Link>   
             </LogoContainer>
             <CustomersContainer>
-                <CustomersButton>
+                <CustomersButton onClick={()=>handleClickOnAdmin()}>
                     <Icon icon="ri:menu-2-fill" color="#FFFFF" height="25px" />
-                    <span>Clientes</span>
+                    <span>Admin</span>
                 </CustomersButton>
             </CustomersContainer>
             <InputContainer>
@@ -59,7 +75,8 @@ const Header = () => {
         </HeaderContainer>
         {userClick?<LoginInput display={'1'} userLogged={userIsLogged} setUserLogged={setUserIsLogged}/>:<LoginInput display={0}/>}
         <Cart width={isOnCart} close={setIsOnCart}/>
-        {1===isOnCart?<ShadowContainer opacity={isOnCart} onClick={()=>{setIsOnCart(0)}}/>:null}   
+        <AdminMenu width={isOnAdmin} close={setIsOnAdmin}/>
+        {1===isOnCart||1===isOnAdmin?<ShadowContainer opacity={isOnShadow} onClick={()=>{handleClickOnShadow()}}/>:null}   
     </>
     )
 }

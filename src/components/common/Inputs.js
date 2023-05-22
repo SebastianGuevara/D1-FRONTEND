@@ -57,3 +57,15 @@ export const LoginTextInput = styled.input`
     }
 
 `
+export const FormsInput = styled(LoginTextInput)`
+    height: 20px;
+    width: 50%;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+    transition: 0.5s;
+
+    &:focus{
+        box-shadow: 0px 0px 15px 0px rgba(219, 7, 30,0.3);
+    }
+`

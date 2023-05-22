@@ -132,21 +132,6 @@ export const AddDeleteContainer = styled.div`
     border-radius: 30px;
     gap: 10px;
 `
-export const CartContainer = styled.div`
-    height: 100vh;
-    width: calc(${props => props.width}*533px);
-    background-color: #FFFFFF;
-    z-index: 4;
-    position: absolute;
-    right: 0;
-    transition: 0.5s;
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    
-`
 export const ShadowContainer = styled.div`
     background-color: rgba(0,0,0,calc(${props => props.opacity}*0.3));
     z-index: 3;
@@ -233,5 +218,56 @@ export const LoginInputContainer = styled.div`
     align-items: center;
     gap: 10px;
     font-family: 'Nunito', sans-serif;
+`
+export const CartContainer = styled.div`
+    height: 100vh;
+    width: calc(${props => props.width}*533px);
+    background-color: #FFFFFF;
+    z-index: 4;
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+`
+export const AdminSideBarContainer = styled.div`
+    position: absolute;
+    left: 0;
+    width: calc(${props => props.width}*365px);
+    height: 100vh;
+    background-color: #FFFFFF;
+    z-index: 4;
+    transition: 0.5s;
+`
+export const MiniHeaderContainer = styled.div`
+    height: 56px;
+    width: 100%;
+    background-color:#DB071E;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`
+export const AdminMenuButtonsContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 30px;
+`
+export const AdminContainer = styled.div`
+    width: 100%;
+    height: 50%;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
 
 `

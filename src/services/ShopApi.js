@@ -30,3 +30,43 @@ export const sellProducts = (cart, clientDocument) =>{
   
   return axios.request(config);
 }
+
+export const addProduct = (product) =>{
+  let data = JSON.stringify({
+    "name": product.name,
+    "value": product.value,
+    "quantity": product.quantity,
+    "id": product.id
+  });
+  
+  let config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: 'http://localhost:8010/api/product',
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data : data
+  };
+  
+  return axios.request(config)
+}
+
+export const addStockToProduct = (product) =>{
+  let data = JSON.stringify({
+    "id": product.id,
+    "quantityToAdd": product.quantity
+  });
+  
+  let config = {
+    method: 'put',
+    maxBodyLength: Infinity,
+    url: 'http://localhost:8010/api/productStock',
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data : data
+  };
+  
+  return axios.request(config)
+}
